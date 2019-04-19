@@ -21,7 +21,15 @@ grandparent();
 // ==== Challenge 2: Create a counter function ====
 const counter = () => {
   // Return a function that when invoked increments and returns a counter variable.
+  let count = 0;
+  return () => {
+    count++;
+    return count;
+  }
 };
+const counter1 = counter();
+console.log(counter1());
+
 // Example usage: const newCounter = counter();
 // newCounter(); // 1
 // newCounter(); // 2
