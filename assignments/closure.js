@@ -1,6 +1,19 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
+const grandparent = () => {
+  console.log(`grandparent`);
 
+  const parent = () => {
+    console.log(`parent`);
+
+    const child = () => {
+      console.log(`child`);
+    }
+    child();
+  }
+  parent();
+}
+grandparent();
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
